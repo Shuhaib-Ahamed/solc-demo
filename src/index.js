@@ -8,7 +8,7 @@ const app = express();
 var jsonParser = bodyParser.json();
 
 const corsOptions = {
-  origin: "http://localhost:4200",
+  origin: "https://sixer-testing-beta.netlify.app/",
 };
 
 app.use(cors(corsOptions));
