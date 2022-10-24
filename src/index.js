@@ -8,7 +8,7 @@ const app = express();
 var jsonParser = bodyParser.json();
 
 const corsOptions = {
-  origin: "https://sixer-testing-beta.netlify.app/",
+  origin: "*",
 };
 
 app.use(cors(corsOptions));
@@ -28,6 +28,4 @@ app.post("/", jsonParser, async (req, res) => {
   }
 });
 
-
-
-app.listen(process.env.PORT || 8000)
+app.listen(process.env.PORT || 8080);

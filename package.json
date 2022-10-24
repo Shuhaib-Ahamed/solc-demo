@@ -10,22 +10,24 @@
     "dev": "nodemon src/index.js localhost 8080",
     "clean": "rm -rf build && mkdir build",
     "build": "npm run clean && babel src -d build",
-    "start": "npm run build && node build/index.js"
+    "start": "npm run build && node build/index.js",
+     "pm2": "pm2 start processes.json --no-daemon"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@babel/core": "7.17.10",
     "@babel/cli": "7.17.10",
+    "@babel/core": "7.17.10",
     "@babel/preset-env": "7.17.10",
+    "babel-plugin-module-resolver": "4.1.0",
     "body-parser": "^1.20.1",
     "cors": "^2.8.5",
     "express": "4.18.1",
-    "babel-plugin-module-resolver": "4.1.0",
-
+    "pm2": "^5.2.2",
     "solc": "0.4.17"
   },
+  
   "devDependencies": {
     "@babel/node": "7.17.10",
     "nodemon": "2.0.16"
